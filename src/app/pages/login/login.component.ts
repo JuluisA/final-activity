@@ -36,6 +36,10 @@ export class LoginComponent implements OnInit {
       username: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required])
     });
+
+    if (this.isLogged) {
+      this.route.navigate(['/']);
+    }
   }
 
   onLogin(): void {
