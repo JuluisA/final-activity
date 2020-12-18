@@ -1,0 +1,75 @@
+<div class="card mb-5">
+  <div class="card-header bg-dark"><h5 class="text-white mb-0">General Information</h5></div>
+  <div class="card-body">
+    <form [formGroup] = "profileForm" (ngSubmit)="onSubmit()">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="first_name">First Name</label>
+          <input formControlName="first_name" class="form-control" [ngClass]="{'is-invalid': !profileForm.get('first_name').valid && profileForm.get('first_name').touched}">
+          <div *ngIf="!profileForm.get('first_name').valid && profileForm.get('first_name').touched" class="invalid-feedback">
+            First Name Required
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="last_name">Last Name</label>
+          <input formControlName="last_name"  class="form-control" [ngClass]="{'is-invalid': !profileForm.get('last_name').valid && profileForm.get('last_name').touched}">
+          <div *ngIf="!profileForm.get('last_name').valid && profileForm.get('last_name').touched" class="invalid-feedback">
+            Last Name Required
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="alias">Alias</label>
+          <input formControlName="alias"  class="form-control" [ngClass]="{'is-invalid': !profileForm.get('alias').valid && profileForm.get('alias').touched}">
+          <div *ngIf="!profileForm.get('alias').valid && profileForm.get('alias').touched" class="invalid-feedback">
+            Alias Required
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="job_title">Job Title</label>
+          <input formControlName="job_title"  class="form-control" [ngClass]="{'is-invalid': !profileForm.get('job_title').valid && profileForm.get('job_title').touched}">
+          <div *ngIf="!profileForm.get('job_title').valid && profileForm.get('job_title').touched" class="invalid-feedback">
+            Job Title Required
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="email">Email</label>
+          <input formControlName="email" class="form-control" [ngClass]="{'is-invalid': !profileForm.get('email').valid && profileForm.get('email').touched}">
+          <div *ngIf="!profileForm.get('email').valid && profileForm.get('email').touched" class="invalid-feedback">
+            Email Required
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="mobile_number">Mobile Number</label>
+          <input formControlName="mobile_number" class="form-control" [ngClass]="{'is-invalid': !profileForm.get('mobile_number').valid && profileForm.get('mobile_number').touched}">
+          <div *ngIf="!profileForm.get('mobile_number').valid && profileForm.get('mobile_number').touched" class="invalid-feedback">
+            Mobile Number Required
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="password">Password</label>
+          <input type="password" formControlName="password" placeholder="Password"  class="form-control" [ngClass]="{'is-invalid': !profileForm.get('password').valid && profileForm.get('password').touched}">
+          <div *ngIf="!profileForm.get('password').valid && profileForm.get('password').touched" class="invalid-feedback">
+            Password Required
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <label for="confirm_password">Confirm Password</label>
+          <input type="password" formControlName="confirm_password" placeholder="Confirm Password" class="form-control" [ngClass]="{'is-invalid': !profileForm.get('confirm_password').valid && profileForm.get('confirm_password').touched}">
+          <div *ngIf="!profileForm.get('confirm_password').valid && profileForm.get('confirm_password').touched" class="invalid-feedback">
+            Confirm Password Required
+          </div>
+        </div>
+        <div class="form-group col-md-12">
+          <button type="submit" class="btn btn-dark">Update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

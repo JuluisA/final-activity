@@ -1,0 +1,14 @@
+<div class="container p-2 px-4 border-top bg-{{ background }} mb-5">
+  <div class="row">
+    <nav class="nav col-10">
+      <a class="nav-link text-white" routerLink="/">Home</a>
+      <a class="nav-link text-white" routerLink="/tickets">Tickets</a>
+      <a class="nav-link text-white" routerLink="/about">About Us</a>
+    </nav>
+    <div class="col text-right">
+      <button (click)="onLogout()" class="btn btn-light" *ngIf="isLogged">Logout</button>
+    </div>
+  </div>
+</div>
+
+

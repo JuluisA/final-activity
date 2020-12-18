@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-12">
+    <div class="text-center mb-3">
+      <img *ngIf="isLogged" src="{{ myProfile?.meta.photo_url || 'https://via.placeholder.com/120' }}" class="rounded-circle img-fluid img-thumbnail" alt="">
+      <img *ngIf="!isLogged" src="https://via.placeholder.com/120" class="rounded-circle img-fluid img-thumbnail" alt="">
+    </div>
+    <div class="mb-5" *ngIf="isLogged">
+      <a class="btn btn-info bg-dark" [ngStyle]="{width: '100%'}" routerLink="/my-profile">Edit Profile</a>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item">Name: <span *ngIf="isLogged">{{myProfile?.name}}</span></li>
+      <li class="list-group-item">Job Title: <span *ngIf="isLogged">{{myProfile?.meta.job_title}}</span></li>
+      <li class="list-group-item">Email: <span *ngIf="isLogged">{{myProfile?.email}}</span></li>
+      <li class="list-group-item">Mobile No.: <span *ngIf="isLogged">{{myProfile?.meta.mobile_number}}</span></li>
+    </ul>
+  </div>
+</div>
+
+

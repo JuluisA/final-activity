@@ -1,0 +1,9 @@
+<h3>[{{selectedTicket?.template.alias}}] {{selectedTicket?.template.name}} <br>#{{selectedTicket?.template_id}}</h3>
+<hr>
+<ul class="list-group">
+  <li class="list-group-item">Submitted at: {{ selectedTicket?.created_at | date: 'dd-MMM-yyyy' }}</li>
+  <li class="list-group-item">Priority: {{selectedTicket?.priority}}</li>
+  <li class="list-group-item">Status: {{selectedTicket?.status}}</li>
+  <li class="list-group-item">Assignee.: {{selectedTicket?.assignee}}</li>
+</ul>
+

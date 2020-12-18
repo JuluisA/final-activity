@@ -1,0 +1,15 @@
+<div class="footer-container bg-{{ background }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <ul class="list-inline px-4 p-2 mb-0">
+          <li class="list-inline-item"><a class="text-xs-cente text-white px-2" routerLink="/">Home</a></li>
+          <li class="list-inline-item"><a class="text-xs-center text-white px-2" routerLink="/tickets">Tickets</a></li>
+          <li class="list-inline-item"><a class="text-xs-center text-white px-2" routerLink="/about">About Us</a></li>
+          <li class="list-inline-item"><a class="text-xs-center text-white px-2" routerLink="/login" *ngIf="!isLogged">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
